@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    color: white;
+    background: rgb(34,25,94);
+    background: linear-gradient(270deg, rgba(34,25,94,1) 0%, rgba(63,26,168,1) 53%, rgba(128,158,248,1) 100%);
+
+}
+
+input, button{
+    display: flexbox;
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+button{
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgb(128, 158, 248);
+    
+}
