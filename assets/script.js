@@ -3,6 +3,7 @@ var queryURL = "http://api.openweathermap.org/data/2.5/weather?units=imperial&q=
 
 var search = document.querySelector('.search input');
 var button = document.querySelector('.search button');
+var cityName = document.querySelector('.cityName');
 
 // add event listener to search button
 async function checkCity(city){
@@ -23,17 +24,21 @@ async function checkCity(city){
 }
 
 // function that stores city names in an array
-// function saveCityNames(){
-//     var cityName = city.value;
-//     var storedCities = JSON.parse(localStorage.getItem("storedCities")) || [];
-//     var cities = cityName;
-//     storedCities.push(cities);
-//     localStorage.setItem("storedCities", JSON.stringify(storedCities));
-// }
+function searchHistory(){
+    var name = cityName.value;
+    if(localStorage.getItem('storedCities') === null){
+        localStorage.setItem('storedCities','[]');
+    }
+    var historySearch = JSON.parse(localStorage.getItem('storedCities'));
+    historySearch.push(name);
+    
+    localStorage.setItem('storedCities', JSON.stringify(historySearch));
+
+}
 
 button.addEventListener("click", ()=>{
     checkCity(search.value);
-    // saveCityNames();
+    searchHistory();
 })
 
 
