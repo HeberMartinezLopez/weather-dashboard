@@ -36,6 +36,7 @@ function displayHistory(){
         viewHistory.innerHTML = JSON.parse(localStorage.getItem('storedCities'))
     }
 }
+
 displayHistory();
 
 button.addEventListener("click", ()=>{
