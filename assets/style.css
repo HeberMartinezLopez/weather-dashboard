@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    
 }
 
 h1{
@@ -22,4 +23,17 @@ button{
     text-align: center;
     background-color: rgb(128, 158, 248);
     
+}
+
+.btn-outline-light{
+    background-color: rgb(128, 158, 248);
+    --bs-btn-hover-bg: rgb(128, 158, 248);
+}
+p{
+    text-align: start;
+}
+
+.container{
+    margin-left: 0%;
+    margin-right: 0%;
 }
